@@ -1,65 +1,3 @@
-// import { useQuery } from "@tanstack/react-query";
-// import axios from "axios";
-// import { PieChart, Pie, Cell, Legend, Tooltip } from "recharts";
-
-// const Reports = () => {
-//   const { data } = useQuery({
-//     queryKey: ["admin-reports"],
-//     queryFn: async () => {
-//       const res = await axios.get(
-//         `${import.meta.env.VITE_API_URL}/admin/reports`,
-//         {
-//           headers: { authorization: `Bearer ${localStorage.getItem("token")}` },
-//         }
-//       );
-//       return res.data;
-//     },
-//   });
-
-//   return (
-//     <div>
-//       <h2 className="text-3xl font-bold mb-6">Reports & Analytics</h2>
-//       <div className="stats shadow w-full">
-//         <div className="stat">
-//           <div className="stat-title">Total Earnings</div>
-//           <div className="stat-value text-primary">
-//             ৳{data?.totalEarnings || 0}
-//           </div>
-//         </div>
-//         <div className="stat">
-//           <div className="stat-title">Total Transactions</div>
-//           <div className="stat-value">{data?.transactionCount || 0}</div>
-//         </div>
-//       </div>
-
-//       <div className="mt-10">
-//         <h3 className="text-2xl font-bold mb-4">Recent Transactions</h3>
-//         <div className="overflow-x-auto">
-//           <table className="table">
-//             <thead>
-//               <tr>
-//                 <th>Student</th>
-//                 <th>Amount</th>
-//                 <th>Date</th>
-//               </tr>
-//             </thead>
-//             <tbody>
-//               {data?.transactions?.map((t) => (
-//                 <tr key={t.transactionId}>
-//                   <td>{t.studentEmail}</td>
-//                   <td>৳{t.amount}</td>
-//                   <td>{new Date(t.paidAt).toLocaleDateString()}</td>
-//                 </tr>
-//               ))}
-//             </tbody>
-//           </table>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Reports;
 
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
@@ -108,7 +46,7 @@ const Reports = () => {
         <div className="stat">
           <div className="stat-title">Total Earnings</div>
           <div className="stat-value text-primary">
-            ৳{data.totalEarnings || 0}
+            ${data.totalEarnings || 0}
           </div>
         </div>
         <div className="stat">
