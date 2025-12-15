@@ -1,4 +1,4 @@
-// src/components/ui/ErrorPage.jsx
+
 import { Link } from "react-router-dom";
 
 const ErrorPage = () => {
