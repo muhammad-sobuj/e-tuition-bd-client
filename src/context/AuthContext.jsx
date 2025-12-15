@@ -20,22 +20,20 @@ export const AuthProvider = ({ children }) => {
 
   const googleProvider = new GoogleAuthProvider();
 
-  // const createUser = (email, password) => {
-  //   setLoading(true);
-  //   return createUserWithEmailAndPassword(auth, email, password);
-  // };
-
   const createUser = async (email, password) => {
-  setLoading(true);
-  try {
-    const result = await createUserWithEmailAndPassword(auth, email, password)
-    return result.user;
-  } catch (error) {
-    setLoading(false);
-    throw error;
-  }
-};
-
+    setLoading(true);
+    try {
+      const result = await createUserWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
+      return result.user;
+    } catch (error) {
+      setLoading(false);
+      throw error;
+    }
+  };
 
   const signIn = (email, password) => {
     setLoading(true);
@@ -109,7 +107,7 @@ export const AuthProvider = ({ children }) => {
     signInWithGoogle,
     userLogOut,
     updateUserProfile,
-     setLoading,
+    setLoading,
   };
 
   return (
