@@ -1,26 +1,18 @@
-
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { useAuth } from "../../Context/AuthContext";
-
-
 
 const Navbar = () => {
   const { user, role, userLogOut } = useAuth();
   const navigate = useNavigate();
 
-  // const handleLogout = () => {
-  //   logout();
-  //   navigate("/login");
-  // };
-
   const handleLogout = async () => {
-  try {
-    await userLogOut(); 
-    navigate("/login"); 
-  } catch (err) {
-    console.log(err);
-  }
-};
+    try {
+      await userLogOut();
+      navigate("/login");
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   return (
     <div className="navbar bg-base-100 shadow-lg sticky top-0 z-50">
@@ -59,10 +51,7 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <Link
-          to="/"
-          className="normal-case text-2xl font-bold text-primary"
-        >
+        <Link to="/" className="normal-case text-2xl font-bold text-primary">
           eTuitionBD
         </Link>
       </div>
