@@ -7,6 +7,10 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import Coverage from "../../components/shared/Coverage";
 import Reviews from "../Reviews/Reviews";
+import hero from "../../assets/hero.svg"
+import AffiliatePartner from "../../components/home/AffiliatePartner";
+import FeaturedOn from "../../components/home/FeaturedOn";
+import ConnectionSteps from "../../components/home/ConnectionSteps";
 
 const Home = () => {
   const { data: tuitions = [] } = useQuery({
@@ -29,7 +33,7 @@ const Home = () => {
         transition={{ duration: 0.8 }}
         className="hero min-h-screen bg-linear-to-br from-primary to-secondary text-white"
       >
-        <div className="hero-content text-center">
+        <div className="hero-content text-center flex-col md:flex-row gap-12">
           <div className="max-w-2xl">
             <h1 className="text-5xl md:text-6xl font-bold leading-tight">
               Find Your Perfect Tutor in Minutes
@@ -49,8 +53,10 @@ const Home = () => {
               </Link>
             </div>
           </div>
+          <img src={hero} alt="Hero" />
         </div>
       </motion.section>
+
 
       {/* Latest Tuitions */}
       <section className="py-20 bg-base-200">
@@ -96,6 +102,11 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+<FeaturedOn/>
+<AffiliatePartner/>
+<ConnectionSteps/>
+
 
       {/* How It Works */}
       <section className="py-20">

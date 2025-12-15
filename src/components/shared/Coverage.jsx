@@ -40,8 +40,9 @@ const Coverage = () => {
           name="location"
           type="search"
           placeholder="Search district"
-          className="input input-bordered w-full max-w-md"
+          className="input input-bordered w-full max-w-md  px-8 py-3 rounded-2xl transition mr-4"
         />
+        <input className='bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded-2xl transition' type="submit" value="Search" />
       </form>
 
       <div className="border w-full h-[800px]">
