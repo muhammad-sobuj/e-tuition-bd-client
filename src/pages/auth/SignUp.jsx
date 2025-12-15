@@ -39,8 +39,6 @@ const SignUp = () => {
 
       navigate(from, { replace: true });
       toast.success("Signup Successful");
-
-      console.log(result);
     } catch (err) {
       console.log(err);
       toast.error(err?.message);

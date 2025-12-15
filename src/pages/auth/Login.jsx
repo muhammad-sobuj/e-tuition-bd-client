@@ -1,41 +1,3 @@
-// import { Link, useNavigate, useLocation } from "react-router-dom";
-// import toast from "react-hot-toast";
-// import { useAuth } from "../../Context/AuthContext";
-
-// const Login = () => {
-//   const { googleLogin } = useAuth();
-//   const navigate = useNavigate();
-//   const location = useLocation();
-//   const from = location.state?.from?.pathname || "/";
-
-//   const handleGoogle = async () => {
-//     try {
-//       await googleLogin();
-//       toast.success("Login successful!");
-//       navigate(from, { replace: true });
-//     } catch {
-//       toast.error("Google login failed");
-//     }
-//   };
-
-//   return (
-//     <div className="min-h-screen flex items-center justify-center bg-base-200">
-//       <div className="card w-96 bg-base-100 shadow-2xl">
-//         <div className="card-body">
-//           <h2 className="text-3xl font-bold text-center">Login</h2>
-//           <button onClick={handleGoogle} className="btn btn-outline btn-primary mt-6">
-//             Continue with Google
-//           </button>
-//           <p className="text-center mt-6">
-//             Don't have an account? <Link to="/register" className="text-primary font-bold">Register</Link>
-//           </p>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Login;
 
 import { Link, Navigate, useLocation, useNavigate } from "react-router";
 import toast from "react-hot-toast";
@@ -79,25 +41,6 @@ const Login = () => {
     }
   };
 
-  // Handle Google Signin
-  // const handleGoogleSignIn = async () => {
-  //   try {
-  //     //User Registration using google
-  //     const { user } = await signInWithGoogle()
-
-  //     await saveOrUpdateUser({
-  //       name: user?.displayName,
-  //       email: user?.email,
-  //       image: user?.photoURL,
-  //     })
-  //     navigate(from, { replace: true })
-  //     toast.success('Login Successful')
-  //   } catch (err) {
-  //     console.log(err)
-  //     setLoading(false)
-  //     toast.error(err?.message)
-  //   }
-  // }
 
   const handleGoogleSignIn = async () => {
     try {
