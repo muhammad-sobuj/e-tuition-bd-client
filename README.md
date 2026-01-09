@@ -36,8 +36,5 @@ Live Link:
 https://e-tuition-bd.web.app/
 ---
 
-## Admin email
-	admin@gmail.com
-  ## password
-  123456
+
 
